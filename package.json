@@ -1,0 +1,23 @@
+{
+  "name": "1612324-BTCNBlockchain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thanhlam1998/1612324-BTCNBlockchain.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thanhlam1998/1612324-BTCNBlockchain/issues"
+  },
+  "homepage": "https://github.com/thanhlam1998/1612324-BTCNBlockchain#readme",
+  "dependencies": {
+    "crypto-js": "^4.0.0"
+  }
+}
