@@ -10,7 +10,7 @@ class BlockChain{
     }
 
     createGenesisBlock(){
-        return new Block("03/06/2020", "Genesis Block", "0");
+        return new Block("1591197900", [], "0");
     }
 
     getLatestBlock(){
@@ -21,10 +21,10 @@ class BlockChain{
         const rewardTx = new Transaction(null, miningRewardAddress, this.miningReward);
         this.pendingTransaction.push(rewardTx);
 
-        let block = new Block(Date.now(), this.pendingTransaction);
+        let block = new Block(Date.now(), this.pendingTransaction, this.getLatestBlock().hash);
         block.mineBlock(this.difficulty);
 
-        console.log('Block successfully hashed');
+        //console.log('Block successfully hashed');
         this.chain.push(block);
 
         this.pendingTransaction = [];
