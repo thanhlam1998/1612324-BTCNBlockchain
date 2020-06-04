@@ -3,12 +3,12 @@ import React, { useState, useEffect } from 'react'
 import BlockchainViewer from './Components/BlockchainViewer/BlockchainViewer'
 import {walletKeys, getBlocks, generateWalletKey} from '../../Services/BlockchainService'
 import TransactionTable from './Components/TransactionTable/TransactionTable'
-import { NavLink } from 'react-router-dom'
 
 
 const Homepage = (props) => {
 
     const blocks = getBlocks();
+    console.log(blocks);
     const [selectedBlock, setSelectedBlock] = useState(blocks.chain[0]);
 
     return (

@@ -1,4 +1,5 @@
 import React from 'react';
+import './TransactionTable.scss'
 
 const TransactionTable = (props) => {
   return (
@@ -19,10 +20,10 @@ const TransactionTable = (props) => {
           </thead>
           <tbody>
             {props.transactions.map((tx, index) => (
-              <tr>
+              <tr key={index}>
                 <td>{index}</td>
-                <td className="text-truncate">{tx.fromAddress !== null ? tx.fromAddress : <span>System</span>}</td>
-                <td className="text-truncate">{tx.toAddress}</td>
+                <td className="text-truncate address">{tx.fromAddress !== null ? tx.fromAddress : <span>System</span>}</td>
+                <td className="text-truncate address">{tx.toAddress}</td>
                 <td>{tx.amount} {tx.fromAddress === null && <span className="text-muted"><br/><small>(Block Reward)</small></span>}</td>
                 <td>{tx.timestamp}</td>
                 <td>

@@ -9,7 +9,7 @@ const BlockchainViewerCard = (props) => {
             color: `#${props.block.previousHash.substring(0,6)}`
         }
     return (
-        <div className="card mr-4" onClick={() => props.onClick()}>
+        <div className="card mr-4 mt-4" onClick={() => props.onClick()}>
             <div className="card-header text-center">
                 {props.block.previousHash === "0" ? <h4 className="card-title">Block <small className="text-muted">(Genesis block)</small></h4>
                 : <h4 className="card-title">Block</h4>}
