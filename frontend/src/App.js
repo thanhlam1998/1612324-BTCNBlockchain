@@ -7,6 +7,7 @@ import SettingPage from './Components/SettingPage/SettingPage'
 import Navbar from './Components/Navbar/Navbar'
 import CreateTransaction from './Components/CreateTransaction/CreateTransaction'
 import PendingTransactions from './Components/PendingTransactions/PendingTransactions';
+import MyWallet from './Components/MyWallet/MyWallet';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/settings" component={SettingPage}/>
         <Route exact path='/create' component={CreateTransaction}/>
         <Route exact path="/pendingTransactions" component={PendingTransactions}/>
+        <Route exact path="/mywallet" component={MyWallet}/>
       </Switch>
     </div>
   );

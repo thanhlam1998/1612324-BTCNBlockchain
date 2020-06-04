@@ -4,8 +4,10 @@ import Blockchain from '../Blockchain/BlockChain';
 import EC from 'elliptic';
 
 const blockchainInstance = new Blockchain();
+blockchainInstance.difficulty = 3;
 
 var walletKeys = [];
+var myWallet;
 
 const generateWalletKey = () => {
   const ec = new EC.ec('secp256k1');
@@ -16,21 +18,29 @@ const generateWalletKey = () => {
     publicKey: key.getPublic('hex'),
     privateKey: key.getPrivate('hex')
   })
+
+  blockchainInstance.minePendingTransaction(key.getPublic('hex'));
+  myWallet = walletKeys[walletKeys.length-1];
 };
 
-generateWalletKey();
-blockchainInstance.difficulty = 1;
-blockchainInstance.minePendingTransaction('my-wallet-address');
+blockchainInstance.minePendingTransaction('address 1');
+blockchainInstance.minePendingTransaction('address 2');
+blockchainInstance.minePendingTransaction('address 3');
+
+// generateWalletKey();
 
 const getPendingTransaction = () =>{
   return blockchainInstance.pendingTransaction;
+}
+
+const getBalance = () =>{
+    return blockchainInstance.getBalanceOfAddress(myWallet.publicKey);
 }
 
 const minePendingTransaction = () => {
   blockchainInstance.minePendingTransaction(
     walletKeys[0].publicKey
   )
-  console.log(blockchainInstance)
 }
 
 const getBlocks = () => {
@@ -43,4 +53,4 @@ const addTransaction = (tx) =>{
 
 
 
-export {walletKeys, getBlocks, generateWalletKey, addTransaction, getPendingTransaction, minePendingTransaction};
+export {walletKeys, getBlocks, generateWalletKey, addTransaction, getPendingTransaction, minePendingTransaction, myWallet, getBalance};

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import BlockchainViewer from './Components/BlockchainViewer/BlockchainViewer'
-import {walletKeys, getBlocks, generateWalletKey} from '../../Services/BlockchainService'
+import {getBlocks} from '../../Services/BlockchainService'
 import TransactionTable from './Components/TransactionTable/TransactionTable'
 
 

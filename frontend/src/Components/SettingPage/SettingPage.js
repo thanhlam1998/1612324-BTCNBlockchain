@@ -10,14 +10,14 @@ const SettingPage = () => {
 
             <div className="form-group">
                 <label>Difficulty</label>
-                <input type="number" className="form-control" defaultValue={blockchain.difficulty}></input>
+                <input type="number" className="form-control" defaultValue={blockchain.difficulty} disabled></input>
             </div>
 
             <br/>
 
             <div className="form-group">
                 <label>Mining reward</label>
-                <input type="number" className="form-control" defaultValue={blockchain.miningReward}></input>
+                <input type="number" className="form-control" defaultValue={blockchain.miningReward} disabled></input>
             </div>
         </div>
     )

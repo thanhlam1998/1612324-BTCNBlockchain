@@ -37,7 +37,7 @@ const CreateTransaction = (props) => {
 
             <div className="form-group">
                 <label name="amount">Amount</label>
-                <input type="text" className="form-control" value={amount} onChange={e => setAmount(e.target.value)}></input>
+                <input type="number" className="form-control" value={amount} onChange={e => setAmount(e.target.value)}></input>
             </div>
 
             <button className="btn btn-primary" onClick={() => createNewTransaction()}>Sign &amp; Create Transaction</button>
