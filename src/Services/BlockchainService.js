@@ -5,6 +5,7 @@ import EC from 'elliptic';
 
 const blockchainInstance = new Blockchain();
 blockchainInstance.difficulty = 3;
+blockchainInstance.miningReward = 100;
 
 var walletKeys = [];
 var myWallet;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Switch, Route, NavLink} from 'react-router-dom'
@@ -11,16 +11,16 @@ import MyWallet from './Components/MyWallet/MyWallet';
 
 function App() {
   return (
-    <div className="App"> 
-       <Navbar/>
-      <Switch>
-        <Route exact path="/" component={Homepage}/>
-        <Route exact path="/settings" component={SettingPage}/>
-        <Route exact path='/create' component={CreateTransaction}/>
-        <Route exact path="/pendingTransactions" component={PendingTransactions}/>
-        <Route exact path="/mywallet" component={MyWallet}/>
-      </Switch>
-    </div>
+      <div className="App"> 
+        <Navbar/>
+        <Switch>
+          <Route exact path="/" component={Homepage}/>
+          <Route exact path="/settings" component={SettingPage}/>
+          <Route exact path='/create' component={CreateTransaction}/>
+          <Route exact path="/pendingTransactions" component={PendingTransactions}/>
+          <Route exact path="/mywallet" component={MyWallet}/>
+        </Switch>
+      </div>
   );
 }
 

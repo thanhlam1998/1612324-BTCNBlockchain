@@ -16,7 +16,8 @@ const CreateTransaction = (props) => {
         addTransaction(newTx);
         setToAddress('');
         setAmount('');
-        newTx = new Transaction();   
+        newTx = new Transaction(); 
+        alert("Transaction created!!!")  
     }
     return (
         <div className="container">

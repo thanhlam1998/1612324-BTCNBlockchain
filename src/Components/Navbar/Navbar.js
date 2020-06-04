@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './Navbar.scss';
 import { NavLink } from 'react-router-dom';
 import { generateWalletKey, walletKeys } from '../../Services/BlockchainService';
